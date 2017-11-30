@@ -1,0 +1,90 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class = "container-fluid" style="text-align:center">
+    <div class="row">
+      <div class = "col-xs-12">       
+  <h3>
+     {{title}}
+  </h3>
+  </div></div>
+  <div class="row"> 
+      <div class="col-md-9"> </div><div class="col-xs-12 col-sm-12 col-md-3">
+    <app-room [mySearch] = "search" (onRoomChanged)= "onRoomChanged($event)"></app-room >
+  
+  </div>
+  </div>
+<!--
+  <div class="row">
+      <div class="col-xs-12">
+      <form class="navbar-form navbar-left" role="search">
+          
+      <div class="input-group">           
+              
+        <input type="search" name="search" id="search" (input)="search=$event.target.value"
+         class="form-control" value=""  placeholder="Search">
+        
+      </div>
+      <!--
+      <button type="submit" class="btn btn-default">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
+  
+  </form>
+</div>      
+  </div>
+-->
+  <div class="row">        
+    <div class="col-xs-10 col-md-9" >
+        <div  id = "cursor" style="position:absolute; left:0px; top:0px;width:2%;height:2%; visibility: hidden;" > 
+            <img src ="rooms_plan.nsf/assets/cursor1.jpg"class="img-responsive">
+             
+             <span id = "span" class="badge">Badge</span>
+             
+        </div>
+ <div *ngIf="gebE3">       
+  <img src='rooms_plan.nsf/images/Geb_51_E3_4k.jpg' class="img-responsive" alt="Building IBM"
+   id ="building3"  (click)="showConfirm($event)"
+    style="opacity: 1.0;"  > </div>
+    <div *ngIf="gebE2">
+    <img src='rooms_plan.nsf/images/Geb_51_E2_4k.jpg'
+    class="img-responsive" alt="Building IBM"
+   id ="building2"  (click)="showConfirm($event)"
+    style="opacity: 1.0;"></div>
+    <div *ngIf="gebE1">
+      <img src='rooms_plan.nsf/images/Geb_51_E1_4k.jpg'
+      class="img-responsive" alt="Building IBM"
+     id ="building1"  (click)="showConfirm($event)"
+      style="opacity: 1.0;"></div>
+    <div *ngIf="gebE0">
+   <img src='rooms_plan.nsf/images/Geb_51_E0_4k.jpg'
+    class="img-responsive" alt="Building IBM"
+   id ="building0"  (click)="showConfirm($event)"
+    style="opacity: 1.0;" ></div>
+    <div *ngIf="gebU1">
+      <img src='rooms_plan.nsf/images/Geb_51_U1_4k.jpg'
+       class="img-responsive" alt="Building IBM"
+      id ="buildingU1"  (click)="showConfirm($event)"
+       style="opacity: 1.0;" ></div>
+       <div *ngIf="gebU2">
+        <img src='rooms_plan.nsf/images/Geb_51_U2_4k.jpg'
+         class="img-responsive" alt="Building IBM"
+        id ="buildingU2"  (click)="showConfirm($event)"
+         style="opacity: 1.0;" ></div>
+
+  </div>
+  
+</div>
+
+<hr>
+<footer id="footer">
+    <p style='color:gray'>&copy; IBM Domino Development Center Rhein-Main 2017</p>
+</footer>
+
+</div>
+
+
+
+  
+  
+  
+  
+ 
